@@ -20,6 +20,7 @@ return [
         'localhost,localhost:3000,127.0.0.1,127.0.0.1:8000,::1',
         Sanctum::currentApplicationUrlWithPort()
     ))),
+//    'stateful' => true,
 
     /*
     |--------------------------------------------------------------------------
@@ -46,7 +47,8 @@ return [
     |
     */
 
-    'expiration' => null,
+    'expiration' => 60,              // One hour
+    'rt_expiration' => 7 * 24 * 60,  // 7 Days
 
     /*
     |--------------------------------------------------------------------------
